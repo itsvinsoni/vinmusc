@@ -1,0 +1,2405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prepe - Muscular System 🦾 Complete Notes</title>
+    <!-- The demo file includes Google Fonts, so I am including them as per the "exact replication" rule. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- This entire <style> block is replicated from the demo file to ensure identical UI, complexity, and code density. -->
+    <style>
+        /* ==================== ROOT VARIABLES ==================== */
+        :root {
+            --primary: #fb923c; /* orange-400 */
+            --primary-light: #fed7aa; /* orange-200 */
+            --primary-dark: #f97316; /* orange-500 */
+            --secondary: #ea580c; /* orange-600 */
+            --text-dark: #1f2937;
+            --text-medium: #4b5563;
+            --text-light: #6b7280;
+            --bg-light: #f8fafc;
+            --border-color: #e2e8f0;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        /* ==================== GLOBAL STYLES ==================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* ==================== SLIDES CONTAINER ==================== */
+        .slides-container {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 30px 15px;
+        }
+
+        /* ==================== SLIDE STYLES ==================== */
+        .slide {
+            width: 100%;
+            background: #ffffff;
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            /* Per instruction: min-height: auto, height: auto, no padding-bottom */
+            min-height: auto; 
+            height: auto;
+            padding: 40px;
+            padding-bottom: 40px; /* Re-adding top/bottom padding for aesthetics, but will ensure content fills it */
+            overflow: hidden;
+            border-radius: 24px;
+            border-top: 8px solid;
+            border-image: linear-gradient(90deg, var(--primary), var(--secondary)) 1;
+        }
+        
+        .slide::after {
+            content: 'Prepe';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-30deg);
+            font-size: 180px;
+            font-weight: 900;
+            color: rgba(0, 0, 0, 0.03);
+            z-index: 1;
+            pointer-events: none;
+            text-transform: uppercase;
+        }
+
+        .slide-number {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-light);
+            background-color: #f1f5f9;
+            padding: 5px 15px;
+            border-radius: 20px;
+            z-index: 2;
+        }
+
+        /* ==================== HEADER ==================== */
+        .slide-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 35px;
+            flex-shrink: 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        .brand {
+            font-size: 36px;
+            font-weight: 900;
+            color: var(--primary-dark);
+        }
+        
+        .slide-title {
+            font-size: 52px;
+            font-weight: 900;
+            color: var(--text-dark);
+            text-align: right;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .slide-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 60%;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, var(--secondary), var(--primary));
+            border-radius: 2px;
+        }
+
+        /* ==================== CONTENT AREA ==================== */
+        .slide-content {
+            flex-grow: 1;
+            display: flex;
+            gap: 30px;
+            width: 100%;
+            position: relative;
+            z-index: 2;
+        }
+
+        .main-column {
+            flex-basis: 65%;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .side-column {
+            flex-basis: 35%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* ==================== TYPOGRAPHY ==================== */
+        h3 {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin: 0 0 20px 0;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--border-color);
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        h3::before {
+            content: '✨';
+            margin-right: 10px;
+        }
+        
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 18px;
+        }
+
+        .main-column > ul > li {
+            background-color: #f9fafb;
+            border-radius: 12px;
+            padding: 15px;
+            transition: all 0.2s ease;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .main-column > ul > li:hover {
+            transform: translateX(5px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .point-title {
+            font-weight: 700;
+            font-size: 21px;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .point-title .icon {
+            margin-right: 12px;
+            font-size: 24px;
+            color: var(--primary);
+        }
+        
+        .point-desc,
+        .point-list {
+            font-size: 18px;
+            color: var(--text-medium);
+            padding-left: 36px;
+            line-height: 1.7;
+        }
+
+        .point-list li {
+            margin-bottom: 10px;
+            padding-left: 8px;
+            position: relative;
+        }
+
+        .point-list li::before {
+            content: '▸';
+            position: absolute;
+            left: -12px;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .point-example {
+            font-style: italic;
+            font-size: 17px;
+            color: var(--text-light);
+            margin-top: 10px;
+            padding: 12px 16px;
+            border-left: 4px solid var(--primary);
+            background: #fffbeb;
+            border-radius: 8px;
+        }
+
+        .point-example::before {
+            content: '💡';
+            margin-right: 8px;
+        }
+
+        /* ==================== INFO CARDS ==================== */
+        .info-card {
+            background: #fff;
+            border: 1px solid var(--border-color);
+            padding: 25px;
+            border-radius: 16px;
+            box-shadow: var(--shadow-md);
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--secondary);
+        }
+
+        .info-card.grow {
+            flex-grow: 1;
+        }
+
+        .info-card h4 {
+            margin: 0 0 15px 0;
+            font-size: 22px;
+            color: var(--text-dark);
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+        }
+
+        .info-card h4::before {
+            content: '🔖';
+            margin-right: 10px;
+        }
+
+        .info-card p,
+        .info-card ul {
+            margin: 0;
+            font-size: 17px;
+            color: var(--text-medium);
+            line-height: 1.7;
+        }
+
+        /* ==================== TABLES ==================== */
+        .mini-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            font-size: 16px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+        }
+
+        .mini-table th,
+        .mini-table td {
+            border-bottom: 1px solid var(--border-color);
+            padding: 14px;
+            text-align: left;
+        }
+        
+        .mini-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .mini-table th {
+            background: var(--primary);
+            color: white;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 15px;
+        }
+
+        .mini-table tbody tr:hover {
+            background: #fff7ed;
+        }
+
+        .mini-table tbody tr:nth-child(even) {
+            background: #f9fafb;
+        }
+
+        /* ==================== BADGES ==================== */
+        .badge-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .badge {
+            background-color: var(--primary-light);
+            border: 1px solid var(--primary);
+            color: var(--secondary);
+            padding: 12px 8px;
+            border-radius: 12px;
+            text-align: center;
+            font-size: 15px;
+            font-weight: 700;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .badge:hover {
+            transform: scale(1.05);
+            background: var(--primary);
+            color: white;
+            box-shadow: var(--shadow-md);
+        }
+
+        /* ==================== TIMELINE ==================== */
+        .timeline {
+            border-left: 3px solid var(--primary);
+            padding-left: 25px;
+            margin-top: 15px;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 25px;
+        }
+
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -32px;
+            top: 5px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: var(--primary);
+            border: 3px solid #fff;
+        }
+
+        .timeline-title {
+            font-weight: 700;
+            font-size: 19px;
+            color: var(--text-dark);
+            margin-bottom: 6px;
+        }
+
+        .timeline-desc {
+            font-size: 17px;
+            color: var(--text-medium);
+            line-height: 1.7;
+        }
+
+        /* ==================== FLOW CHART ==================== */
+        .flow-chart {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding-top: 15px;
+            flex-wrap: wrap;
+        }
+
+        .flow-step {
+            text-align: center;
+            font-weight: 700;
+            font-size: 16px;
+            background: #f9fafb;
+            padding: 15px 10px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+            min-width: 100px;
+        }
+
+        .flow-step:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary);
+        }
+
+        .flow-arrow {
+            font-size: 30px;
+            color: var(--secondary);
+            font-weight: bold;
+        }
+        
+        /* ==================== FOOTER TAGS ==================== */
+        .slide-footer {
+            display: flex;
+            gap: 12px;
+            padding-top: 25px;
+            border-top: 1px solid var(--border-color);
+            margin-top: 30px;
+            flex-shrink: 0;
+            width: 100%;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-tag {
+            background-color: var(--primary-light);
+            color: var(--secondary);
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 16px;
+            font-weight: 700;
+            border: 1px solid transparent;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .footer-tag:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        /* ==================== HERO SLIDE ==================== */
+        .hero-slide {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+
+        .hero-title {
+            font-size: 95px;
+            font-weight: 900;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+            letter-spacing: -3px;
+        }
+
+        .hero-subtitle {
+            font-size: 34px;
+            color: var(--secondary);
+            margin-bottom: 50px;
+            font-weight: 700;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            width: 100%;
+        }
+
+        .hero-tile {
+            background: #f9fafb;
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .hero-tile:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary);
+        }
+
+        .hero-tile h3 {
+            color: var(--primary-dark);
+            border: none;
+            padding: 0;
+            margin-bottom: 12px;
+            font-size: 24px;
+        }
+
+        .hero-tile p {
+            margin: 0;
+            font-size: 18px;
+            color: var(--text-medium);
+            line-height: 1.7;
+            font-weight: 500;
+        }
+        
+        /* ==================== STAT BOXES ==================== */
+        .stat-box {
+            background: #f9fafb;
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.2s ease;
+        }
+
+        .stat-box:hover {
+            transform: scale(1.05);
+            box-shadow: var(--shadow-md);
+        }
+
+        .stat-number {
+            font-size: 42px;
+            font-weight: 900;
+            color: var(--primary);
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 16px;
+            color: var(--text-medium);
+            font-weight: 600;
+        }
+
+        /* ==================== QUICK FACT BOX ==================== */
+        .quick-fact {
+            background: #fffbeb;
+            border-left: 5px solid #facc15; /* yellow-400 */
+            padding: 15px 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 15px 0;
+            position: relative;
+        }
+
+        .quick-fact::before {
+            content: '⚡';
+            font-size: 20px;
+            position: absolute;
+            left: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-sm);
+            color: #ca8a04; /* yellow-600 */
+        }
+
+        .quick-fact strong {
+            color: #a16207; /* yellow-700 */
+            font-weight: 800;
+        }
+
+        /* ==================== RESPONSIVE ==================== */
+        @media (max-width: 1100px) {
+            .slide {
+                padding: 30px 25px;
+            }
+
+            .slide-content {
+                flex-direction: column;
+            }
+
+            .main-column,
+            .side-column {
+                flex-basis: auto;
+                width: 100%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .slides-container {
+                padding: 20px 10px;
+            }
+
+            .slide {
+                padding: 25px 20px;
+            }
+
+             .slide::after {
+                font-size: 120px;
+            }
+
+            .slide-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+                margin-bottom: 25px;
+            }
+
+            .brand {
+                font-size: 30px;
+            }
+
+            .slide-title {
+                font-size: 36px;
+                text-align: left;
+            }
+
+            .slide-title::after {
+                left: 0;
+                right: auto;
+            }
+
+            .hero-grid,
+            .slide-content[style*="grid-template-columns"] {
+                grid-template-columns: 1fr !important;
+            }
+
+            h3 { font-size: 24px; }
+            .point-title { font-size: 19px; }
+            .point-list { font-size: 16px; padding-left: 25px;}
+            .info-card h4 { font-size: 20px; }
+            .info-card p, .info-card ul { font-size: 16px; }
+            .hero-title { font-size: 60px; }
+            .hero-subtitle { font-size: 24px; }
+            .hero-tile h3 { font-size: 22px; }
+            .hero-tile p { font-size: 16px; }
+
+            .mini-table {
+                font-size: 14px;
+            }
+            .mini-table th, .mini-table td {
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .slides-container {
+                padding: 15px 5px;
+            }
+            .slide {
+                padding: 20px 15px;
+                margin-bottom: 20px;
+            }
+             .slide::after {
+                font-size: 90px;
+            }
+            .slide-title { font-size: 30px; }
+            .hero-title { font-size: 48px; }
+            .hero-subtitle { font-size: 20px; }
+            
+            /* Final slide grid ko yahaan stack karenge */
+            .final-slide-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ==================== NEW STYLES FOR FINAL SLIDE ==================== */
+        .final-slide {
+            background: linear-gradient(135deg, #f5f3ff, #fdf2f8); /* Light purple to light pink gradient */
+            border-image: linear-gradient(90deg, #6d28d9, #db2777) 1; /* Purple to pink border */
+            text-align: center;
+            padding: 60px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .final-slide-content {
+            max-width: 900px;
+            width: 100%;
+            z-index: 2;
+            position: relative;
+        }
+
+        .final-slide h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #6d28d9; /* Indigo-700 */
+            margin-bottom: 8px;
+        }
+
+        .final-slide h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 48px; /* Image se match karne ke liye 48px kiya */
+            font-weight: 900;
+            color: var(--text-dark);
+            margin-bottom: 15px; /* Margin adjust kiya */
+            border: none;
+            padding: 0;
+            letter-spacing: -1px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            display: block; /* YEH LINE ADD KI HAI global H3 style ko override karne ke liye */
+        }
+        
+        .final-slide h3::before {
+            content: none; /* Remove sparkle emoji */
+        }
+
+        .final-slide p {
+            font-size: 20px;
+            color: var(--text-medium);
+            margin-bottom: 40px;
+        }
+
+        .final-slide-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .final-slide-box {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            text-align: center; /* Box text ko center karne ke liye ye add kiya hai */
+            text-decoration: none; /* Link underline hatane ke liye add kiya */
+        }
+
+        .final-slide-box:hover {
+            transform: translateY(-12px); /* Hover effect ko behtar kiya */
+            border-color: #6d28d9;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.07); /* Shadow ko soft kiya */
+        }
+
+        .final-slide-box .icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+        
+        .final-slide-box .icon.offer {
+            background-color: #dcfce7; /* green-100 */
+            color: #22c55e; /* green-500 */
+        }
+        
+        .final-slide-box .icon.courses {
+            background-color: #e0f2fe; /* sky-100 */
+            color: #0ea5e9; /* sky-500 */
+        }
+        
+        .final-slide-box .icon.insta {
+            background-color: #fdf2f8; /* pink-100 */
+            color: #db2777; /* pink-600 */
+        }
+
+        /* Instagram text ko pink karne ke liye naya rule */
+        .final-slide-box.insta-box h4 {
+            color: #db2777;
+        }
+        
+        /* Link hover par text color ko fix rakhne ke liye rules */
+        .final-slide-box:hover h4 {
+            color: var(--text-dark);
+        }
+        .final-slide-box:hover span {
+            color: var(--text-light);
+        }
+        .final-slide-box.insta-box:hover h4 {
+            color: #db2777;
+        }
+        
+        .final-slide-box h4 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin: 0;
+        }
+        
+        .final-slide-box h4::before {
+             content: none; /* Remove tag emoji */
+        }
+
+        .final-slide-box span {
+            font-size: 16px;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        .final-slide-divider {
+            width: 80%;
+            height: 2px;
+            background: repeating-linear-gradient(
+                90deg,
+                var(--border-color),
+                var(--border-color) 6px,
+                transparent 6px,
+                transparent 12px
+            );
+            margin: 0 auto 40px auto;
+        }
+
+        .final-slide-button {
+            font-family: 'Poppins', sans-serif;
+            display: inline-block; /* inline-flex se inline-block kiya */
+            padding: 18px 40px;
+            font-size: 22px;
+            font-weight: 700;
+            color: white;
+            background: linear-gradient(90deg, var(--secondary), var(--primary));
+            border-radius: 16px;
+            text-decoration: none;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.3s ease;
+        }
+
+        .final-slide-button:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 25px -5px rgba(234, 88, 12, 0.3);
+        }
+        
+        /* Responsive adjustments for the new slide */
+        @media (max-width: 768px) {
+            .final-slide h3 {
+                font-size: 36px;
+            }
+            .final-slide p {
+                font-size: 18px;
+            }
+            .final-slide-box h4 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="slides-container" id="slidesContainer">
+
+        <!-- ==================== SLIDE 1: HERO ==================== -->
+        <section class="slide hero-slide">
+            <div class="slide-number">1 / 21</div>
+            <div class="brand" style="position: absolute; top: 40px; left: 40px;">Prepe</div>
+            <h1 class="hero-title">Muscular System 🦾</h1>
+            <p class="hero-subtitle">The Body's Engine: Structure, Function & Types</p>
+            <div class="hero-grid">
+                <div class="hero-tile">
+                    <h3>What is it?</h3>
+                    <p>A complex system of over 600 contractile tissues (muscles) that enables movement, maintains posture, and generates heat.</p>
+                </div>
+                <div class="hero-tile">
+                    <h3>Three Types</h3>
+                    <p>Skeletal (voluntary, moves bones), Smooth (involuntary, lines organs), and Cardiac (involuntary, found only in the heart).</p>
+                </div>
+                <div class="hero-tile">
+                    <h3>Key Fact</h3>
+                    <p>Muscles make up approximately 40% of your total body weight and work by contracting (shortening) and relaxing (lengthening).</p>
+                </div>
+            </div>
+            <p style="font-size: 24px; font-weight: 700; color: var(--text-medium); margin-top: 50px;">Scroll for Complete Notes ↓</p>
+        </section>
+
+        <!-- ==================== SLIDE 2: OVERVIEW & PROPERTIES ==================== -->
+        <section class="slide">
+            <div class="slide-number">2 / 21</div>
+            <div class="slide-header">
+                <div class="brand">Prepe</div>
+                <div class="slide-title">Overview & Properties 📖</div>
+            </div>
+            <div class="slide-content">
+                <div class="main-column">
+                    <h3>Introduction to Myology</h3>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">🔬</span>Definition</div>
+                            <p class="point-desc">The muscular system is composed of specialized cells called muscle fibers. Their main property is contractility.</p>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">🐭</span>Etymology</div>
+                            <p class="point-desc">The word "muscle" comes from the Latin "musculus," meaning "little mouse," as the shape of some muscles (like the biceps) resembled a mouse.</p>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">🧬</span>Origin</div>
+                            <p class="point-desc">All muscles are derived from the embryonic germ layer called the Mesoderm.</p>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">🔴</span>Myoglobin</div>
+                            <p class="point-desc">A red-colored, oxygen-binding pigment found in muscle fibers, similar to hemoglobin in red blood cells. It stores oxygen within the muscle.</p>
+                        </li>
+                    </ul>
+                    <h3>Core Properties of Muscle</h3>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">⚡</span>Excitability (Irritability)</div>
+                            <p class="point-desc">The ability to receive and respond to a stimulus (e.g., a nerve impulse).</p>
+                        </li>
+                         <li>
+                            <div class="point-title"><span class="icon">💪</span>Contractility</div>
+                            <p class="point-desc">The ability to shorten forcibly when adequately stimulated. This is the defining property of muscle tissue.</p>
+                        </li>
+                         <li>
+                            <div class="point-title"><span class="icon">🧘</span>Extensibility</div>
+                            <p class="point-desc">The ability to be stretched or extended beyond their resting length.</p>
+                        </li>
+                         <li>
+                            <div class="point-title"><span class="icon">🔄</span>Elasticity</div>
+                            <p class="point-desc">The ability to recoil and resume their original resting length after being stretched.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="side-column">
+                    <div class="info-card grow">
+                        <h4>Key Glossary Terms</h4>
+                        <table class="mini-table">
+                            <thead>
+                                <tr>
+                                    <th>Term</th>
+                                    <th>Definition</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Myology</strong></td>
+                                    <td>The scientific study of muscles.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Sarcolemma</strong></td>
+                                    <td>The plasma membrane of a muscle fiber.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Sarcoplasm</strong></td>
+                                    <td>The cytoplasm of a muscle fiber.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Fascicle</strong></td>
+                                    <td>A bundle of muscle fibers.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Spindle Cell</strong></td>
+                                    <td>A common shape for smooth muscle cells.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">600+</span>
+                        <span class="stat-label">Muscles in the Human Body</span>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="footer-tag">🎯 Core Concepts</div>
+                <div class="footer-tag">🧬 Myology Basics</div>
+                <div class="footer-tag">⚡ 4 Key Properties</div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 3: SKELETAL MUSCLE STRUCTURE (LAYERS) ==================== -->
+        <section class="slide">
+            <div class="slide-number">3 / 21</div>
+            <div class="slide-header">
+                <div class="brand">Prepe</div>
+                <div class="slide-title">Skeletal Muscle Layers 🧅</div>
+            </div>
+            <div class="slide-content">
+                <div class="main-column">
+                    <h3>Connective Tissue Wrappings</h3>
+                    <p style="font-size: 18px; color: var(--text-medium); margin-bottom: 20px; padding: 15px; background: #f9fafb; border-radius: 12px;">
+                       <strong>💡 Concept:</strong> Each muscle is wrapped in layers of connective tissue that support and protect the fibers, and merge to form tendons.
+                    </p>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">🏛️</span>Epimysium</div>
+                            <ul class="point-list">
+                                <li><strong>"Epi" = Upon.</strong> The outermost layer.</li>
+                                <li>A dense sheath of collagen fibers that surrounds the entire muscle.</li>
+                                <li>Separates the muscle from surrounding tissues.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">📦</span>Perimysium</div>
+                            <ul class="point-list">
+                                <li><strong>"Peri" = Around.</strong> The middle layer.</li>
+                                <li>Divides the muscle into bundles of fibers called Fascicles.</li>
+                                <li>Contains blood vessels and nerves that supply each fascicle.</li>
+                            </ul>
+                        </li>
+                         <li>
+                            <div class="point-title"><span class="icon">➖</span>Endomysium</div>
+                            <ul class="point-list">
+                                <li><strong>"Endo" = Within.</strong> The innermost layer.</li>
+                                <li>A delicate layer that surrounds each individual muscle fiber (cell).</li>
+                                <li>Contains capillaries and nerve endings.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h3>Fascia</h3>
+                     <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">🧊</span>Deep Fascia</div>
+                            <p class="point-desc">A tougher layer of dense connective tissue that binds muscles into functional groups (e.g., the quadriceps group).</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="side-column">
+                    <div class="info-card">
+                        <h4>Structural Hierarchy 🏗️</h4>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-title">1. Muscle (Organ)</div>
+                                <div class="timeline-desc">Covered by <strong>Epimysium</strong></div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-title">2. Fascicle (Bundle)</div>
+                                <div class="timeline-desc">Covered by <strong>Perimysium</strong></div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-title">3. Muscle Fiber (Cell)</div>
+                                <div class="timeline-desc">Covered by <strong>Endomysium</strong></div>
+                            </div>
+                             <div class="timeline-item">
+                                <div class="timeline-title">4. Myofibril</div>
+                                <div class="timeline-desc">Structures within the fiber.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-card grow">
+                        <h4>Tendon & Aponeurosis</h4>
+                        <p style="margin-bottom: 12px;">At the end of the muscle, all three layers (Epimysium, Perimysium, Endomysium) merge together to form:</p>
+                        <ul style="list-style-type: '▸'; padding-left: 20px;">
+                            <li><strong>Tendon:</strong> A strong, cord-like structure that attaches muscle to bone.</li>
+                            <li><strong>Aponeurosis:</strong> A broad, sheet-like tendon that attaches muscle to bone or to other muscles (e.g., in the abdomen).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="footer-tag">🧅 3 Layers</div>
+                <div class="footer-tag">🏛️ Epi- Peri- Endo-</div>
+                <div class="footer-tag">🏗️ Structural Hierarchy</div>
+                <div class="footer-tag">PYQ Focus</div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 4: MUSCLE FIBER & SARCOMERE ==================== -->
+        <section class="slide">
+            <div class="slide-number">4 / 21</div>
+            <div class="slide-header">
+                <div class="brand">Prepe</div>
+                <div class="slide-title">Fiber & Sarcomere 🔬</div>
+            </div>
+            <div class="slide-content">
+                <div class="main-column">
+                    <h3>The Muscle Fiber (Cell)</h3>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">🖼️</span>Sarcolemma</div>
+                            <p class="point-desc">The plasma membrane of the muscle cell. It has a resting membrane potential and can conduct action potentials.</p>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">💧</span>Sarcoplasm</div>
+                            <p class="point-desc">The cytoplasm of the muscle cell. Rich in glycogen (for energy) and myoglobin (for oxygen).</p>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">🧬</span>Nuclei</div>
+                            <p class="point-desc">Skeletal muscle fibers are multinucleated (have many nuclei), located just beneath the sarcolemma.</p>
+                        </li>
+                    </ul>
+                    <h3>Myofibrils & Myofilaments</h3>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">🧵</span>Myofibrils</div>
+                            <p class="point-desc">Long, cylindrical structures that run the entire length of the fiber. They are the contractile organelles, composed of myofilaments.</p>
+                        </li>
+                         <li>
+                            <div class="point-title"><span class="icon">굵</span>Thick Myofilaments</div>
+                            <p class="point-desc">Made of the protein Myosin. Has a 'head' that binds to actin and uses ATP.</p>
+                        </li>
+                         <li>
+                            <div class="point-title"><span class="icon">얇</span>Thin Myofilaments</div>
+                            <p class="point-desc">Made of the protein Actin, plus two regulatory proteins: Troponin and Tropomyosin.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="side-column">
+                    <div class="info-card grow">
+                        <h4>The Sarcomere (Functional Unit)</h4>
+                        <p style="margin-bottom: 15px;">The arrangement of thick (Myosin) and thin (Actin) filaments creates a repeating pattern of bands. One full unit of this pattern is a sarcomere.</p>
+                        <table class="mini-table">
+                            <thead>
+                                <tr>
+                                    <th>Zone</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Z-Line (Disc)</strong></td>
+                                    <td>The boundary of one sarcomere. Actin filaments attach here.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>A-Band</strong></td>
+                                    <td>The dark band. Contains the entire length of the Myosin (thick) filament.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>I-Band</strong></td>
+                                    <td>The light band. Contains only Actin (thin) filaments.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>H-Zone</strong></td>
+                                    <td>The lighter region in the middle of the A-Band. Contains only Myosin.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>M-Line</strong></td>
+                                    <td>The very center of the H-Zone. Holds myosin filaments together.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="footer-tag">🔬 Micro-Anatomy</div>
+                <div class="footer-tag">🧵 Actin & Myosin</div>
+                <div class="footer-tag">🎯 Sarcomere (PYQ)</div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 5: SLIDING FILAMENT THEORY ==================== -->
+        <section class="slide">
+            <div class="slide-number">5 / 21</div>
+            <div class="slide-header">
+                <div class="brand">Prepe</div>
+                <div class="slide-title">Muscle Contraction ⚡</div>
+            </div>
+            <div class="slide-content">
+                <div class="main-column">
+                    <h3>Sliding Filament Theory</h3>
+                    <p style="font-size: 18px; color: var(--text-medium); margin-bottom: 20px; padding: 15px; background: #f9fafb; border-radius: 12px;">
+                       <strong>💡 Concept:</strong> Muscle contraction occurs when the thin filaments (Actin) slide past the thick filaments (Myosin), causing the sarcomere to shorten. The filaments themselves do not change length.
+                    </V>
+                    <h3>Key Players</h3>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">🧠</span>Neurotransmitter</div>
+                            <p class="point-desc"><strong>Acetylcholine (ACh)</strong> is released from a motor neuron at the neuromuscular junction.</p>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">🔑</span>Calcium Ions (Ca²⁺)</div>
+                            <p class="point-desc">The "key" that unlocks the contraction. It is released from the Sarcoplasmic Reticulum (SR) in response to the nerve signal.</p>
+                        </li>
+                         <li>
+                            <div class="point-title"><span class="icon">🛡️</span>Troponin & Tropomyosin</div>
+                            <p class="point-desc">Regulatory proteins on the actin filament. In a resting muscle, Tropomyosin blocks the myosin-binding sites on actin.</p>
+                        </li>
+                         <li>
+                            <div class="point-title"><span class="icon">🔋</span>ATP (Energy)</div>
+                            <p class="point-desc">Powers the "power stroke" of the myosin head and is also required to detach the myosin head from actin (for relaxation).</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="side-column">
+                    <div class="info-card grow">
+                        <h4>The Contraction Cycle 🔄</h4>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-title">1. Signal Arrives</div>
+                                <div class="timeline-desc">ACh binds to receptors on the sarcolemma, starting an action potential.</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-title">2. Calcium Release</div>
+                                <div class="timeline-desc">Action potential travels down T-tubules, triggering Ca²⁺ release from the SR.</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-title">3. Binding Sites Exposed</div>
+                                <div class="timeline-desc">Ca²⁺ binds to Troponin, which pulls Tropomyosin away, exposing the actin binding sites.</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-title">4. Cross-Bridge Formation</div>
+                                <div class="timeline-desc">The energized Myosin head binds to the exposed site on Actin.</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-title">5. Power Stroke</div>
+                                <div class="timeline-desc">The Myosin head pivots, pulling the Actin filament toward the M-line. ADP is released.</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-title">6. Detachment</div>
+                                <div class="timeline-desc">A new ATP molecule binds to the Myosin head, causing it to detach from Actin.</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-title">7. Reactivation</div>
+                                <div class="timeline-desc">The ATP is hydrolyzed (broken down), re-energizing the Myosin head. The cycle repeats as long as Ca²⁺ is present.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="footer-tag">⚡ Sliding Filament (PYQ)</div>
+                <div class="footer-tag">🔑 Role of Calcium</div>
+                <div class="footer-tag">🔋 Role of ATP</div>
+                <div class="footer-tag">🔄 Contraction Cycle</div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 6: MUSCLE TYPES (SKELETAL) ==================== -->
+        <section class="slide">
+            <div class="slide-number">6 / 21</div>
+            <div class="slide-header">
+                <div class="brand">Prepe</div>
+                <div class="slide-title">Types of Muscle (1/3) 🏃</div>
+            </div>
+            <div class="slide-content">
+                <div class="main-column" style="flex-basis: 100%;">
+                    <h3>Type 1: Skeletal Muscle</h3>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">🦴</span>Attachment</div>
+                            <p class="point-desc">Primarily attached to the skeleton (bones) via tendons. A few attach to skin (e.g., facial muscles).</p>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">🧠</span>Control</div>
+                            <p class="point-desc">Voluntary. Under conscious control from the somatic nervous system. We can choose to move them.</p>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">🔬</span>Structure</div>
+                            <p class="point-desc">Fibers are long, cylindrical, and multinucleated (many nuclei per cell).</p>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">📊</span>Appearance</div>
+                            <p class="point-desc">Striated (striped). This is due to the regular arrangement of sarcomeres (A-bands and I-bands).</p>
+                        </li>
+                         <li>
+                            <div class="point-title"><span class="icon">⚡</span>Contraction</div>
+                            <p class="point-desc">Contracts rapidly but tires easily. Requires nerve stimulation to contract.</p>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">💪</span>Function</div>
+                            <p class="point-desc">Body movement (locomotion), maintaining posture, stabilizing joints, generating heat (shivering).</p>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">🤝</span>Subtypes (Functional)</div>
+                            <ul class="point-list">
+                                <li><strong>Flexors:</strong> Decrease the angle at a joint (e.g., biceps bending the elbow).</li>
+                                <li><strong>Extensors:</strong> Increase the angle at a joint (e.g., triceps straightening the elbow).</li>
+                            </ul>
+                            <p class="point-example">Examples: Biceps brachii, Deltoid, Quadriceps femoris, Trapezius.</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Side column removed to make this slide denser, as per "Zero Empty Space" policy -->
+            </div>
+            <div class="slide-footer">
+                <div class="footer-tag">🏃 Skeletal Muscle</div>
+                <div class="footer-tag">🧠 Voluntary Control</div>
+                <div class="footer-tag">📊 Striated</div>
+                <div class="footer-tag">🦴 Attached to Bones</div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 7: MUSCLE TYPES (SMOOTH & CARDIAC) ==================== -->
+        <section class="slide">
+            <div class="slide-number">7 / 21</div>
+            <div class="slide-header">
+                <div class="brand">Prepe</div>
+                <div class="slide-title">Types of Muscle (2/3) ❤️</div>
+            </div>
+            <div class="slide-content">
+                <div class="main-column">
+                    <h3>Type 2: Smooth Muscle</h3>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">📍</span>Location</div>
+                            <p class="point-desc">Found in the walls of hollow visceral organs (e.g., stomach, intestines, bladder, blood vessels, airways).</p>
+                        </li>
+                         <li>
+                            <div class="point-title"><span class="icon">🤖</span>Control</div>
+                            <p class="point-desc">Involuntary. Under unconscious control from the autonomic nervous system.</p>
+                        </li>
+                         <li>
+                            <div class="point-title"><span class="icon">🔬</span>Structure</div>
+                            <p class="point-desc">Cells are spindle-shaped and uninucleate (one central nucleus).</p>
+                        </li>
+                         <li>
+                            <div class="point-title"><span class="icon">🚫</span>Appearance</div>
+                            <p class="point-desc">Non-striated (smooth). Sarcomeres are not regularly arranged.</p>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">⏳</span>Contraction</div>
+                            <p class="point-desc">Contracts slowly and rhythmically. Very resistant to fatigue. Can be stimulated by nerves, hormones, or stretch.</p>
+                        </li>
+                    </ul>
+                     <h3>Type 3: Cardiac Muscle</h3>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">📍</span>Location</div>
+                            <p class="point-desc">Found only in the wall of the heart (myocardium).</p>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">🤖</span>Control</div>
+                            <p class="point-desc">Involuntary. Autonomic nervous system can change the rate, but it contracts on its own (autorhythmic).</p>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">🔬</span>Structure</div>
+                            <p class="point-desc">Cells are branched, uninucleate, and connect at special junctions called Intercalated Discs.</p>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">📊</span>Appearance</div>
+                            <p class="point-desc">Striated (just like skeletal muscle).</p>
+                        </li>
+                         <li>
+                            <div class="point-title"><span class="icon">🔗</span>Intercalated Discs</div>
+                            <p class="point-desc">These discs contain gap junctions and desmosomes, allowing the heart to contract as a single, coordinated unit.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="side-column">
+                    <div class="info-card grow">
+                        <h4>Quick Comparison Table</h4>
+                        <table class="mini-table">
+                            <thead>
+                                <tr>
+                                    <th>Feature</th>
+                                    <th>Skeletal</th>
+                                    <th>Smooth</th>
+                                    <th>Cardiac</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Control</strong></td>
+                                    <td>Voluntary</td>
+                                    <td>Involuntary</td>
+                                    <td>Involuntary</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Striated?</strong></td>
+                                    <td>✅ Yes</td>
+                                    <td>❌ No</td>
+                                    <td>✅ Yes</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Nuclei</strong></td>
+                                    <td>Many</td>
+                                    <td>One</td>
+                                    <td>One</td>
+                                </tr>
+                                 <tr>
+                                    <td><strong>Cell Shape</strong></td>
+                                    <td>Cylindrical</td>
+                                    <td>Spindle</td>
+                                    <td>Branched</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Intercalated Discs?</strong></td>
+                                    <td>❌ No</td>
+                                    <td>❌ No</td>
+                                    <td>✅ Yes</td>
+                                </tr>
+                                 <tr>
+                                    <td><strong>Fatigues?</strong></td>
+                                    <td>Easily</td>
+                                    <td>Slowly</td>
+                                    <td>Never</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="footer-tag">❤️ Cardiac Muscle</div>
+                <div class="footer-tag">🧬 Smooth Muscle</div>
+                <div class="footer-tag">📊 Comparison (PYQ)</div>
+                <div class="footer-tag">🔗 Intercalated Discs</div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 8: FUNCTIONS OF MUSCLES ==================== -->
+        <section class="slide">
+            <div class="slide-number">8 / 21</div>
+            <div class="slide-header">
+                <div class="brand">Prepe</div>
+                <div class="slide-title">Muscle Functions 🎯</div>
+            </div>
+            <div class="slide-content">
+                <div class="main-column" style="flex-basis: 100%;">
+                    <h3>7 Key Functions of the Muscular System</h3>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">🏃</span>1. Movement of the Body</div>
+                            <p class="point-desc">Skeletal muscles attach to bones and pull on them to produce movement (locomotion), from walking to fine motor skills like writing.</p>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">🧘</span>2. Maintenance of Posture</div>
+                            <p class="point-desc">Muscles are in a constant state of partial contraction (muscle tone) that allows us to remain upright (sitting, standing) against gravity.</p>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">🔗</span>3. Joint Stability</div>
+                            <p class="point-desc">Muscle tendons cross over joints and the tension from muscle tone helps to stabilize and strengthen them (e.g., the rotator cuff at the shoulder).</p>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">🔥</span>4. Heat Production (Thermogenesis)</div>
+                            <p class="point-desc">Muscle contraction generates heat as a byproduct. This is vital for maintaining normal body temperature (e.g., shivering is rapid muscle contraction to generate heat).</p>
+                        </li>
+                         <li>
+                            <div class="point-title"><span class="icon">❤️</span>5. Internal Movement & Support</div>
+                            <p class="point-desc">Cardiac muscle pumps blood. Smooth muscle moves food through the digestive tract (peristalsis), regulates blood pressure, and pushes urine out of the bladder.</p>
+                        </li>
+                         <li>
+                            <div class="point-title"><span class="icon">🛡️</span>6. Support & Protection</div>
+                            <p class="point-desc">Muscles, like the abdominal wall, support the weight of visceral organs and protect them from external trauma.</p>
+                        </li>
+                         <li>
+                            <div class="point-title"><span class="icon">💪</span>7. Maintain Muscle Tone</div>
+                            <p class="point-desc">A continuous, low-level contraction of muscles that keeps them firm, healthy, and ready to respond to stimuli.</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Side column removed for density -->
+            </div>
+            <div class="slide-footer">
+                <div class="footer-tag">🎯 7 Key Functions</div>
+                <div class="footer-tag">🏃 Movement</div>
+                <div class="footer-tag">🧘 Posture</div>
+                <div class="footer-tag">🔥 Heat Production</div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 9: NOMENCLATURE OF MUSCLES ==================== -->
+        <section class="slide">
+            <div class="slide-number">9 / 21</div>
+            <div class="slide-header">
+                <div class="brand">Prepe</div>
+                <div class="slide-title">Muscle Nomenclature 🏷️</div>
+            </div>
+            <div class="slide-content">
+                <div class="main-column">
+                    <h3>How Muscles Get Their Names</h3>
+                    <p style="font-size: 18px; color: var(--text-medium); margin-bottom: 20px; padding: 15px; background: #f9fafb; border-radius: 12px;">
+                       Muscles are named using 7 main criteria, often in combination.
+                    </p>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">1️⃣</span>Number of Origins</div>
+                            <p class="point-desc">Based on the number of "heads" or origin points.</p>
+                            <p class="point-example"><strong>Biceps</strong> (2), <strong>Triceps</strong> (3), <strong>Quadriceps</strong> (4).</p>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">2️⃣</span>Location of Origin/Insertion</div>
+                            <p class="point-desc">Named for their attachment points.</p>
+                            <p class="point-example"><strong>Sterno-cleido-mastoid</strong> (originates on Sternum and Clavicle, inserts on Mastoid process).</p>
+                        </li>
+                         <li>
+                            <div class="point-title"><span class="icon">3️⃣</span>Shape</div>
+                            <p class="point-desc">Named for their geometric shape.</p>
+                            <p class="point-example"><strong>Deltoid</strong> (triangle), <strong>Trapezius</strong> (trapezoid), <strong>Serratus</strong> (saw-toothed).</p>
+                        </li>
+                         <li>
+                            <div class="point-title"><span class="icon">4️⃣</span>Size</div>
+                            <p class="point-desc">Uses terms like Maximus (largest), Minimus (smallest), Longus (long), Brevis (short).</p>
+                            <p class="point-example"><strong>Gluteus Maximus</strong> (largest), <strong>Peroneus Longus</strong> (long).</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="side-column">
+                    <!-- Continuing the list in the side column to fill space -->
+                    <div class="info-card grow">
+                        <h4>Naming Criteria (Cont.)</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 15px;">
+                                <div class="point-title"><span class="icon">5️⃣</span>Location</div>
+                                <p class="point-desc" style="padding-left: 0;">Named for the body region or bone they are near.</p>
+                                <p class="point-example" style="padding-left: 0;"><strong>Temporalis</strong> (over temporal bone), <strong>Tibialis Anterior</strong> (front of tibia).</p>
+                            </li>
+                             <li style="margin-bottom: 15px;">
+                                <div class="point-title"><span class="icon">6️⃣</span>Direction of Fibers</div>
+                                <p class="point-desc" style="padding-left: 0;">Named for the direction their fibers run relative to the body's midline.</p>
+                                <p class="point-example" style="padding-left: 0;"><strong>Rectus</strong> (straight), <strong>Oblique</strong> (angled), <strong>Transverse</strong> (across).</p>
+                            </li>
+                             <li style="margin-bottom: 15px;">
+                                <div class="point-title"><span class="icon">7️⃣</span>Action</div>
+                                <p class="point-desc" style="padding-left: 0;">Named for the movement they produce.</p>
+                                <p class="point-example" style="padding-left: 0;"><strong>Flexor</strong> (flexes), <strong>Extensor</strong> (extends), <strong>Adductor</strong> (adducts).</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="footer-tag">🏷️ Nomenclature</div>
+                <div class="footer-tag">📍 Location</div>
+                <div class="footer-tag">📐 Shape</div>
+                <div class="footer-tag">💪 Action</div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 10: MUSCLES OF HEAD (FACIAL) ==================== -->
+        <section class="slide">
+            <div class="slide-number">10 / 21</div>
+            <div class="slide-header">
+                <div class="brand">Prepe</div>
+                <div class="slide-title">Muscles of the Head (1/2) 😀</div>
+            </div>
+            <div class="slide-content">
+                <div class="main-column">
+                    <h3>Muscles of Facial Expression</h3>
+                    <p style="font-size: 18px; color: var(--text-medium); margin-bottom: 20px; padding: 15px; background: #f9fafb; border-radius: 12px;">
+                       These muscles insert into the skin (not bone) and are all innervated by the Facial Nerve (Cranial Nerve VII).
+                    </p>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">😲</span>Occipitofrontalis</div>
+                            <p class="point-desc">Has two parts (Frontalis, Occipitalis). The Frontalis raises the eyebrows and wrinkles the forehead (surprise).</p>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">😉</span>Orbicularis Oculi</div>
+                            <p class="point-desc">A circular muscle around the eye. Responsible for closing the eye (blinking, winking, squinting).</p>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">😙</span>Orbicularis Oris</div>
+                            <p class="point-desc">A circular muscle around the mouth. Closes and protrudes the lips (the "kissing muscle").</p>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">😁</span>Buccinator</div>
+                            <p class="point-desc">The "trumpeter's muscle." Compresses the cheek, holding food between the teeth during chewing and enabling whistling.</p>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">😊</span>Zygomaticus (Major/Minor)</div>
+                            <p class="point-desc">Extends from the cheekbone (zygomatic) to the corner of the mouth. Pulls the corner of the mouth upward (the "smiling muscle").</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="side-column">
+                    <div class="info-card grow">
+                        <h4>More Facial Muscles</h4>
+                        <table class="mini-table">
+                            <thead>
+                                <tr>
+                                    <th>Muscle</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Levator palpebrae superioris</strong></td>
+                                    <td>Raises upper eyelid (opens eye).</td>
+                                </tr>
+                                 <tr>
+                                    <td><strong>Quadratus labii superioris</strong></td>
+                                    <td>Raises the upper lip.</td>
+                                </tr>
+                                 <tr>
+                                    <td><strong>Quadratus labii inferioris</strong></td>
+                                    <td>Lowers the lower lip.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Platysma</strong></td>
+                                    <td>Tenses skin of the neck (as in horror).</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="footer-tag">😀 Facial Expression</div>
+                <div class="footer-tag">🧠 Facial Nerve (CN VII)</div>
+                <div class="footer-tag">😊 Smiling</div>
+                <div class="footer-tag">😉 Winking</div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 11: MUSCLES OF HEAD (MASTICATION) & NECK ==================== -->
+        <section class="slide">
+            <div class="slide-number">11 / 21</div>
+            <div class="slide-header">
+                <div class="brand">Prepe</div>
+                <div class="slide-title">Head (2/2) & Neck 🦷</div>
+            </div>
+            <div class="slide-content">
+                <div class="main-column">
+                    <h3>Muscles of Mastication (Chewing)</h3>
+                    <p style="font-size: 18px; color: var(--text-medium); margin-bottom: 20px; padding: 15px; background: #f9fafb; border-radius: 12px;">
+                       These 4 paired muscles move the mandible (lower jaw) and are innervated by the Trigeminal Nerve (Cranial Nerve V).
+                    </p>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">🦷</span>Masseter</div>
+                            <p class="point-desc">Origin: Zygomatic arch. Insertion: Mandible. Action: Elevates mandible (closes jaw). The strongest chewing muscle.</p>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">🦷</span>Temporalis</div>
+                            <p class="point-desc">Origin: Temporal fossa. Insertion: Mandible. Action: Elevates and retracts mandible.</p>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">🦷</span>Pterygoid (Medial & Lateral)</div>
+                            <p class="point-desc">Origin: Sphenoid bone. Insertion: Mandible. Action: Closes mouth and allows for side-to-side (grinding) motion.</p>
+                        </li>
+                    </ul>
+                     <h3>Muscles of the Neck</h3>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">🔄</span>Sternocleidomastoid (SCM)</div>
+                            <p class="point-desc">Origin: Sternum & Clavicle. Insertion: Mastoid process. Action: When one contracts, rotates head ("no"). When both contract, flexes neck ("yes").</p>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">👅</span>Hyoid Muscles</div>
+                            <p class="point-desc">A group of muscles (Biventer, Mylohyoid, Geniohyoid) that move the hyoid bone, larynx (voice box), and tongue during swallowing and speech.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="side-column">
+                    <div class="info-card grow">
+                        <h4>Key Nerve Innervations</h4>
+                        <div class="badge-grid">
+                            <div class="badge">Facial Expression:<br>Facial N. (CN VII)</div>
+                            <div class="badge">Mastication:<br>Trigeminal N. (CN V)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="footer-tag">🦷 Mastication</div>
+                <div class="footer-tag">🧠 Trigeminal Nerve (CN V)</div>
+                <div class="footer-tag">🔄 Sternocleidomastoid</div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 12: MUSCLES OF CHEST (THORAX) ==================== -->
+        <section class="slide">
+            <div class="slide-number">12 / 21</div>
+            <div class="slide-header">
+                <div class="brand">Prepe</div>
+                <div class="slide-title">Muscles of the Chest 흉</div>
+            </div>
+            <div class="slide-content">
+                <div class="main-column">
+                    <h3>Anterior Thorax Muscles</h3>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">💪</span>Pectoralis Major</div>
+                            <p class="point-desc">Large, fan-shaped muscle of the upper chest. Action: Adducts, flexes, and medially rotates the arm (e.g., in push-ups or hugging).</p>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">▫️</span>Pectoralis Minor</div>
+                            <p class="point-desc">Smaller muscle located deep to the pectoralis major. Action: Pulls the scapula (shoulder blade) forward and downward.</p>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">🥊</span>Serratus Anterior</div>
+                            <p class="point-desc">Located on the lateral wall of the thorax. Action: Pulls the scapula anteriorly (protraction). Known as the "boxer's muscle" for its role in punching.</p>
+                        </li>
+                    </ul>
+                    <h3>Muscles of Respiration</h3>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">🌬️</span>Diaphragm</div>
+                            <p class="point-desc">A large, dome-shaped muscle that separates the thoracic and abdominal cavities. The prime mover of inspiration. When it contracts, it flattens, increasing the volume of the thorax and drawing air in.</p>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">⬆️</span>External Intercostals</div>
+                            <p class="point-desc">Muscles between the ribs. Action: Elevate the ribs during inhalation, expanding the chest cavity.</p>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">⬇️</span>Internal Intercostals</div>
+                            <p class="point-desc">Muscles between the ribs, deep to the externals. Action: Depress the ribs during forced exhalation (e.g., coughing).</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="side-column">
+                    <div class="info-card grow">
+                        <h4>Breathing Mechanism</h4>
+                        <table class="mini-table">
+                            <thead>
+                                <tr>
+                                    <th>Action</th>
+                                    <th>Muscles Used</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Quiet Inhalation</strong></td>
+                                    <td>Diaphragm, External Intercostals</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Quiet Exhalation</strong></td>
+                                    <td>Passive (muscles relax)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Forced Inhalation</strong></td>
+                                    <td>+ Pectoralis Minor, SCM</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Forced Exhalation</strong></td>
+                                    <td>Internal Intercostals, Abdominals</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="footer-tag">흉 Pectoralis Major</div>
+                <div class="footer-tag">🌬️ Diaphragm (PYQ)</div>
+                <div class="footer-tag">🥊 Serratus Anterior</div>
+                <div class="footer-tag">⬆️ Intercostals</div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 13: MUSCLES OF ABDOMEN ==================== -->
+        <section class="slide">
+            <div class="slide-number">13 / 21</div>
+            <div class="slide-header">
+                <div class="brand">Prepe</div>
+                <div class="slide-title">Muscles of the Abdomen 🏋️</div>
+            </div>
+            <div class="slide-content">
+                <div class="main-column">
+                    <h3>The Abdominal Wall</h3>
+                    <p style="font-size: 18px; color: var(--text-medium); margin-bottom: 20px; padding: 15px; background: #f9fafb; border-radius: 12px;">
+                       These muscles form a strong, flexible wall that protects internal organs, supports the trunk, and aids in forced breathing, coughing, and childbirth.
+                    </V>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">||</span>Rectus Abdominis</div>
+                            <p class="point-desc">The "six-pack" muscle. A paired, straight muscle. Action: Flexes the lumbar spine (e.g., in a sit-up). Separated by the Linea Alba.</p>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">↘️</span>External Oblique</div>
+                            <p class="point-desc">Superficial lateral muscle. Fibers run downward and medially. Action: Flexes and rotates the vertebral column.</p>
+                        </li>
+                         <li>
+                            <div class="point-title"><span class="icon">↗️</span>Internal Oblique</div>
+                            <p class="point-desc">Deep to the external oblique. Fibers run upward and medially. Action: Same as external oblique (flexion and rotation).</p>
+                        </li>
+                         <li>
+                            <div class="point-title"><span class="icon">↔️</span>Transversus Abdominis</div>
+                            <p class="point-desc">The deepest abdominal muscle. Fibers run horizontally. Action: Compresses abdominal contents; acts like a "corset" to stabilize the spine.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="side-column">
+                    <div class="info-card">
+                        <h4>Posterior Abdominal Wall</h4>
+                         <ul>
+                            <li>
+                                <div class="point-title" style="font-size: 19px;"><span class="icon">⬛</span>Quadratus Lumborum</div>
+                                <p class="point-desc" style="padding-left: 0;">Deep muscle in the lower back. Action: Flexes the lumbar region laterally (side-bending).</p>
+                            </li>
+                        </ul>
+                    </div>
+                     <div class="info-card grow">
+                        <h4>Aponeurosis</h4>
+                        <p style="margin-bottom: 12px;">The oblique and transversus muscles do not attach directly to the midline. Instead, they form broad, flat tendinous sheets called aponeuroses, which wrap around the rectus abdominis to form the rectus sheath and meet at the Linea Alba.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="footer-tag">🏋️ Rectus Abdominis</div>
+                <div class="footer-tag">|| Obliques</div>
+                <div class="footer-tag">↔️ Transversus</div>
+                <div class="footer-tag">Linea Alba</div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 14: MUSCLES OF BACK ==================== -->
+        <section class="slide">
+            <div class="slide-number">14 / 21</div>
+            <div class="slide-header">
+                <div class="brand">Prepe</div>
+                <div class="slide-title">Muscles of the Back 🧘</div>
+            </div>
+            <div class="slide-content">
+                <div class="main-column">
+                    <h3>Superficial Back Muscles (Move Scapula)</h3>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">💎</span>Trapezius</div>
+                            <p class="point-desc">Large, diamond-shaped muscle. Action: Elevates ("shrugging"), depresses, and retracts (pulls back) the scapula.</p>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">🦇</span>Latissimus Dorsi ("Lats")</div>
+                            <p class="point-desc">Large, fan-shaped muscle of the lower back. Action: Extends, adducts, and medially rotates the arm. The "swimmer's muscle" or "pull-up muscle".</p>
+                        </li>
+                         <li>
+                            <div class="point-title"><span class="icon">🌱</span>Levator Scapulae</div>
+                            <p class="point-desc">Action: Elevates the scapula (as in shrugging).</p>
+                        </li>
+                         <li>
+                            <div class="point-title"><span class="icon">📐</span>Rhomboideus (Major & Minor)</div>
+                            <p class="point-desc">Located between the vertebrae and scapula. Action: Retracts the scapula (pulls shoulder blades together, "rowing" motion).</p>
+                        </li>
+                    </ul>
+                    <h3>Deep Back Muscles (Move Spine)</h3>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">🏛️</span>Erector Spinae</div>
+                            <p class="point-desc">A large group of muscles that run parallel to the vertebral column. Prime mover of back extension (bending backward). Crucial for maintaining posture.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="side-column">
+                    <div class="info-card grow">
+                        <h4>Key Actions Summary</h4>
+                        <table class="mini-table">
+                            <thead>
+                                <tr>
+                                    <th>Action</th>
+                                    <th>Prime Mover</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Shrug Shoulders</strong></td>
+                                    <td>Trapezius</td>
+                                </tr>
+                                 <tr>
+                                    <td><strong>Pull-ups (Adduct Arm)</strong></td>
+                                    <td>Latissimus Dorsi</td>
+                                </tr>
+                                 <tr>
+                                    <td><strong>Rowing (Retract Scapula)</strong></td>
+                                    <td>Rhomboideus</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Straighten Back (Posture)</strong></td>
+                                    <td>Erector Spinae</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="footer-tag">🧘 Trapezius</div>
+                <div class="footer-tag">🦇 Latissimus Dorsi</div>
+                <div class="footer-tag">🏛️ Erector Spinae</div>
+                <div class="footer-tag">Posture</div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 15: MUSCLES OF SHOULDER & ARM ==================== -->
+        <section class="slide">
+            <div class="slide-number">15 / 21</div>
+            <div class="slide-header">
+                <div class="brand">Prepe</div>
+                <div class="slide-title">Shoulder & Arm Muscles 💪</div>
+            </div>
+            <div class="slide-content">
+                <div class="main-column">
+                    <h3>Shoulder Muscles</h3>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">▽</span>Deltoid</div>
+                            <p class="point-desc">Thick, triangular muscle covering the shoulder joint. Prime mover for arm abduction (lifting arm away from the side). Also assists in flexion and extension.</p>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">🔄</span>Rotator Cuff (SITS)</div>
+                            <p class="point-desc">A group of 4 deep muscles that stabilize the shoulder joint (prevent dislocation). Includes: <strong>S</strong>upraspinatus, <strong>I</strong>nfraspinatus, <strong>T</strong>eres Minor, <strong>S</strong>ubscapularis.</p>
+                        </li>
+                    </ul>
+                    <h3>Arm Muscles (Anterior Compartment)</h3>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">💪</span>Biceps Brachii</div>
+                            <p class="point-desc">Two-headed muscle. Action: Prime mover for elbow flexion and supination of the forearm (turning palm up).</p>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">🦾</span>Brachialis</div>
+                            <p class="point-desc">Located deep to the biceps. The true prime mover of elbow flexion (provides the most power).</p>
+                        </li>
+                    </ul>
+                     <h3>Arm Muscles (Posterior Compartment)</h3>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">🖐️</span>Triceps Brachii</div>
+                            <p class="point-desc">Three-headed muscle. Prime mover for elbow extension (straightening the arm). Antagonist to the biceps.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="side-column">
+                    <div class="info-card grow">
+                        <h4>Antagonistic Pair: Elbow</h4>
+                         <p style="margin-bottom: 15px;">Muscles work in pairs. When one contracts (agonist), the other relaxes (antagonist).</p>
+                        <table class="mini-table">
+                            <thead>
+                                <tr>
+                                    <th>Action</th>
+                                    <th>Agonist (Mover)</th>
+                                    <th>Antagonist (Opposer)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Elbow Flexion</strong></td>
+                                    <td>Biceps Brachii, Brachialis</td>
+                                    <td>Triceps Brachii</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Elbow Extension</strong></td>
+                                    <td>Triceps Brachii</td>
+                                    <td>Biceps Brachii, Brachialis</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="badge-grid">
+                            <div class="badge">SITS Muscles:<br>Rotator Cuff</div>
+                            <div class="badge">Deltoid:<br>Arm Abduction</div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="footer-tag">💪 Biceps (Flexion)</div>
+                <div class="footer-tag">🖐️ Triceps (Extension)</div>
+                <div class="footer-tag">▽ Deltoid (Abduction)</div>
+                <div class="footer-tag">🔄 Rotator Cuff (SITS)</div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 16: MUSCLES OF HIP & THIGH (ANTERIOR) ==================== -->
+        <section class="slide">
+            <div class="slide-number">16 / 21</div>
+            <div class="slide-header">
+                <div class="brand">Prepe</div>
+                <div class="slide-title">Hip & Thigh (1/2) 🦵</div>
+            </div>
+            <div class="slide-content">
+                <div class="main-column">
+                    <h3>Hip Muscles (Gluteal Region)</h3>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">🍑</span>Gluteus Maximus</div>
+                            <p class="point-desc">Largest and most superficial gluteal muscle. Prime mover for hip extension (e.g., climbing stairs, standing up from a chair). Also used for lateral rotation.</p>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">💉</span>Gluteus Medius & Minimus</div>
+                            <p class="point-desc">Located deep to the maximus. Prime mover for hip abduction. Also stabilizes the pelvis during walking. A common site for intramuscular (IM) injections.</p>
+                        </li>
+                         <li>
+                            <div class="point-title"><span class="icon">⬆️</span>Iliopsoas</div>
+                            <p class="point-desc">A deep muscle that connects the lumbar vertebrae/ilium to the femur. Prime mover for hip flexion (lifting the knee up).</p>
+                        </li>
+                    </ul>
+                     <h3>Thigh Muscles (Anterior)</h3>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">👟</span>Quadriceps Femoris (Quads)</div>
+                            <p class="point-desc">A group of 4 muscles on the anterior thigh. Prime mover for knee extension (kicking). All 4 insert via the patellar tendon.</p>
+                            <ul class="point-list">
+                                <li><strong>Rectus Femoris</strong> (also flexes hip)</li>
+                                <li><strong>Vastus Lateralis</strong> (outer thigh)</li>
+                                <li><strong>Vastus Medialis</strong> (inner thigh)</li>
+                                <li><strong>Vastus Intermedius</strong> (deep)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="side-column">
+                    <div class="info-card">
+                        <h4>Longest Muscle</h4>
+                        <div class="quick-fact" style="margin-top: 0;">
+                            <strong>Sartorius:</strong> The longest muscle in the body. A thin, strap-like muscle that crosses both hip and knee joints. It flexes and laterally rotates the hip (e.g., crossing your legs).
+                        </div>
+                    </div>
+                    <div class="info-card grow">
+                        <h4>Key Actions: Hip</h4>
+                        <table class="mini-table">
+                            <thead>
+                                <tr>
+                                    <th>Action</th>
+                                    <th>Prime Mover</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Hip Extension</strong> (Moving leg back)</td>
+                                    <td>Gluteus Maximus</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Hip Flexion</strong> (Lifting knee up)</td>
+                                    <td>Iliopsoas</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Hip Abduction</strong> (Moving leg out)</td>
+                                    <td>Gluteus Medius</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="footer-tag">👟 Quadriceps (Knee Extension)</div>
+                <div class="footer-tag">🍑 Gluteus Maximus (Hip Extension)</div>
+                <div class="footer-tag">💉 Gluteus Medius (IM Site)</div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 17: MUSCLES OF THIGH (POSTERIOR) & LEG ==================== -->
+        <section class="slide">
+            <div class="slide-number">17 / 21</div>
+            <div class="slide-header">
+                <div class="brand">Prepe</div>
+                <div class="slide-title">Thigh (2/2) & Leg 🦵</div>
+            </div>
+            <div class="slide-content">
+                <div class="main-column">
+                    <h3>Thigh Muscles (Posterior)</h3>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">🏃</span>Hamstring Group</div>
+                            <p class="point-desc">A group of 3 muscles on the posterior thigh. Prime mover for knee flexion (bending the knee). Also assists in hip extension.</p>
+                             <ul class="point-list">
+                                <li><strong>Biceps Femoris</strong> (lateral side)</li>
+                                <li><strong>Semitendinosus</strong> (medial)</li>
+                                <li><strong>Semimembranosus</strong> (medial, deep)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h3>Thigh Muscles (Medial)</h3>
+                    <ul>
+                         <li>
+                            <div class="point-title"><span class="icon">➡️⬅️</span>Adductor Group</div>
+                            <p class="point-desc">Muscles on the inner thigh (Adductor longus, brevis, magnus). Action: Adducts the thigh (brings it toward the midline).</p>
+                        </li>
+                    </ul>
+                    <h3>Leg Muscles (Lower Leg - Posterior)</h3>
+                     <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">🌱</span>Gastrocnemius</div>
+                            <p class="point-desc">The superficial, two-headed "calf muscle". Action: Plantar flexes the foot (pointing toes down). Connects to the heel via the Achilles Tendon.</p>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">👞</span>Soleus</div>
+                            <p class="point-desc">Deep to the gastrocnemius. Also plantar flexes the foot. Important for posture while standing.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="side-column">
+                    <div class="info-card">
+                        <h4>Antagonistic Pair: Knee</h4>
+                        <table class="mini-table">
+                            <thead>
+                                <tr>
+                                    <th>Action</th>
+                                    <th>Agonist (Mover)</th>
+                                    <th>Antagonist (Opposer)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Knee Extension</strong></td>
+                                    <td>Quadriceps</td>
+                                    <td>Hamstrings</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Knee Flexion</strong></td>
+                                    <td>Hamstrings</td>
+                                    <td>Quadriceps</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                     <div class="info-card grow">
+                        <h4>Leg Muscles (Lower Leg - Anterior)</h4>
+                         <ul>
+                            <li>
+                                <div class="point-title" style="font-size: 19px;"><span class="icon">👟</span>Tibialis Anterior</div>
+                                <p class="point-desc" style="padding-left: 0;">Superficial muscle on the shin. Prime mover for dorsiflexion (lifting foot up, as in walking on heels). Antagonist to Gastrocnemius.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="footer-tag">🏃 Hamstrings (Knee Flexion)</div>
+                <div class="footer-tag">🌱 Gastrocnemius (Plantar Flexion)</div>
+                <div class="footer-tag">👟 Tibialis Anterior (Dorsiflexion)</div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 18: SUMMARY TABLE (HEAD & TRUNK) ==================== -->
+        <section class="slide">
+            <div class="slide-number">18 / 21</div>
+            <div class="slide-header">
+                <div class="brand">Prepe</div>
+                <div class="slide-title">Summary: Head & Trunk 📊</div>
+            </div>
+            <div class="slide-content" style="display: block;">
+                <h3>Head & Neck Summary</h3>
+                <table class="mini-table" style="width: 100%; font-size: 17px; margin-bottom: 25px;">
+                    <thead>
+                        <tr style="background: var(--primary);">
+                            <th>Muscle</th>
+                            <th>Primary Function</th>
+                            <th>Nerve</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Orbicularis Oculi</strong></td>
+                            <td>Closes eye</td>
+                            <td>Facial (CN VII)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Zygomaticus</strong></td>
+                            <td>Smiling</td>
+                            <td>Facial (CN VII)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Masseter / Temporalis</strong></td>
+                            <td>Closes jaw (Chewing)</td>
+                            <td>Trigeminal (CN V)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Sternocleidomastoid</strong></td>
+                            <td>Rotates head / Flexes neck</td>
+                            <td>Accessory (CN XI)</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>Trunk Summary</h3>
+                <table class="mini-table" style="width: 100%; font-size: 17px;">
+                    <thead>
+                        <tr style="background: var(--primary);">
+                            <th>Muscle</th>
+                            <th>Primary Function</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                         <tr>
+                            <td><strong>Diaphragm</strong></td>
+                            <td>Inhalation</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pectoralis Major</strong></td>
+                            <td>Adducts arm</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Latissimus Dorsi</strong></td>
+                            <td>Extends & Adducts arm</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Trapezius</strong></td>
+                            <td>Moves scapula (shrugs)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Rectus Abdominis</strong></td>
+                            <td>Flexes spine (sit-up)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Erector Spinae</strong></td>
+                            <td>Extends spine (posture)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="slide-footer">
+                <div class="footer-tag">📊 Quick Revision</div>
+                <div class="footer-tag">🧠 Head & Neck</div>
+                <div class="footer-tag">🏋️ Trunk</div>
+            </div>
+        </section>
+        
+        <!-- ==================== SLIDE 19: SUMMARY TABLE (UPPER & LOWER LIMB) ==================== -->
+        <section class="slide">
+            <div class="slide-number">19 / 21</div>
+            <div class="slide-header">
+                <div class="brand">Prepe</div>
+                <div class="slide-title">Summary: Limbs 📊</div>
+            </div>
+            <div class="slide-content" style="display: block;">
+                <h3>Upper Limb Summary</h3>
+                <table class="mini-table" style="width: 100%; font-size: 17px; margin-bottom: 25px;">
+                    <thead>
+                        <tr style="background: var(--primary);">
+                            <th>Muscle</th>
+                            <th>Primary Function</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Deltoid</strong></td>
+                            <td>Abducts arm</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Rotator Cuff (SITS)</strong></td>
+                            <td>Stabilizes shoulder</td>
+                        </tr>
+                         <tr>
+                            <td><strong>Biceps Brachii</strong></td>
+                            <td>Flexes elbow & Supinates</td>
+                        </tr>
+                         <tr>
+                            <td><strong>Brachialis</strong></td>
+                            <td>Flexes elbow (Prime Mover)</td>
+                        </tr>
+                         <tr>
+                            <td><strong>Triceps Brachii</strong></td>
+                            <td>Extends elbow</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>Lower Limb Summary</h3>
+                <table class="mini-table" style="width: 100%; font-size: 17px;">
+                    <thead>
+                        <tr style="background: var(--primary);">
+                            <th>Muscle</th>
+                            <th>Primary Function</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                         <tr>
+                            <td><strong>Gluteus Maximus</strong></td>
+                            <td>Extends hip</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Gluteus Medius</strong></td>
+                            <td>Abducts hip (IM site)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Iliopsoas</strong></td>
+                            <td>Flexes hip</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Quadriceps Femoris</strong></td>
+                            <td>Extends knee</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hamstring Group</strong></td>
+                            <td>Flexes knee</td>
+                        </tr>
+                         <tr>
+                            <td><strong>Gastrocnemius / Soleus</strong></td>
+                            <td>Plantar flexes foot</td>
+                        </tr>
+                         <tr>
+                            <td><strong>Tibialis Anterior</strong></td>
+                            <td>Dorsiflexes foot</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="slide-footer">
+                <div class="footer-tag">📊 Quick Revision</div>
+                <div class="footer-tag">💪 Upper Limb</div>
+                <div class="footer-tag">🦵 Lower Limb</div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 20: CLINICAL NOTES & MCQS ==================== -->
+        <section class="slide">
+            <div class="slide-number">20 / 21</div>
+            <div class="slide-header">
+                <div class="brand">Prepe</div>
+                <div class="slide-title">Clinical Notes 🩺</div>
+            </div>
+            <div class="slide-content">
+                <div class="main-column">
+                    <h3>Clinical Conditions</h3>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">😖</span>Myalgia</div>
+                            <p class="point-desc">General term for muscle pain, weakness, spasms, or inflammation. Can be caused by overuse, injury, or infection.</p>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">🧬</span>Muscular Dystrophy</div>
+                            <p class="point-desc">A group of genetic diseases that cause progressive weakness and loss of muscle mass (muscle wasting).</p>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">📉</span>Myasthenia Gravis</div>
+                            <p class="point-desc">An autoimmune disease where the body attacks and blocks Acetylcholine (ACh) receptors at the neuromuscular junction, leading to severe muscle weakness and poor contraction.</p>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">🔥</span>Myositis</div>
+                            <p class="point-desc">Inflammation of skeletal muscle tissue, often caused by infection, injury, or autoimmune disease. Symptoms include pain, swelling, and weakness.</p>
+                        </li>
+                    </ul>
+                     <h3>Important Exam Questions</h3>
+                    <ul class="point-list" style="padding-left: 20px;">
+                        <li>Describe the steps of the Sliding Filament Theory.</li>
+                        <li>Compare and contrast the three types of muscle tissue.</li>
+                        <li>List the 7 criteria for naming muscles, with an example for each.</li>
+                        <li>What is the role of Calcium and ATP in muscle contraction?</li>
+                        <li>Identify the prime movers for elbow flexion, elbow extension, knee flexion, and knee extension.</li>
+                    </ul>
+                </div>
+                <div class="side-column">
+                    <div class="info-card grow">
+                        <h4>Test Your Knowledge (MCQs)</h4>
+                        <ul style="list-style-type: '▸'; padding-left: 20px; line-height: 1.9; font-size: 18px;">
+                            <li><strong>1. What is the functional unit of muscle contraction?</strong><br>(a) Myofibril (b) Fascicle (c) Sarcomere</li>
+                            <li><strong>2. Which muscle is the "boxer's muscle"?</strong><br>(a) Pectoralis Major (b) Serratus Anterior (c) Rectus Abdominis</li>
+                             <li><strong>3. Which protein blocks the actin binding site at rest?</strong><br>(a) Myosin (b) Troponin (c) Tropomyosin</li>
+                             <li><strong>4. The prime mover for knee extension is:</strong><br>(a) Hamstrings (b) Quadriceps (c) Gluteus Maximus</li>
+                             <li><strong>5. Intercalated discs are found in:</strong><br>(a) Skeletal muscle (b) Smooth muscle (c) Cardiac muscle</li>
+                        </ul>
+                         <div class="quick-fact" style="margin-top: 15px;">
+                            <strong>Answers:</strong> 1(c), 2(b), 3(c), 4(b), 5(c)
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="footer-tag">🩺 Clinical Conditions</div>
+                <div class="footer-tag">🧬 Myasthenia Gravis</div>
+                <div class="footer-tag">❓ MCQs & Exam Qs</div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 21: FINAL WORDS (TEMPLATE) ==================== -->
+        <!-- This slide is replicated exactly from the demo file as part of the brand template -->
+        <section class="slide final-slide">
+            <div class="slide-number">21 / 21</div>
+            <div class="final-slide-content">
+                <h2>Welcome to Prepe</h2>
+                <h3>Take Your Preparation to the Next Level!</h3>
+                <p>Check out our other amazing courses and resources.</p>
+                
+                <div class="final-slide-grid">
+                    <!-- Box 1: Offer -->
+                    <a href="https://offer.prepeai.in" class="final-slide-box" target="_blank" rel="noopener noreferrer">
+                        <div class="icon offer">
+                            <!-- SVG replicated from demo -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+                        </div>
+                        <h4>FLAT 50% OFF</h4>
+                        <span>Limited Time Offer</span>
+                    </a>
+                    
+                    <!-- Box 2: Courses -->
+                    <a href="https://shop.prepeai.in" class="final-slide-box" target="_blank" rel="noopener noreferrer">
+                        <div class="icon courses">
+                            <!-- SVG replicated from demo -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                        </div>
+                        <h4>Explore More Courses</h4>
+                        <span>Expand Your Knowledge</span>
+                    </a>
+                    
+                    <!-- Box 3: Instagram -->
+                    <a href="https://insta.prepeai.in" class="final-slide-box insta-box" target="_blank" rel="noopener noreferrer">
+                        <div class="icon insta">
+                             <!-- SVG replicated from demo -->
+                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </div>
+                        <h4>Follow on Instagram</h4>
+                        <span>@prepe.ai</span>
+                    </a>
+                </div>
+                
+                <div class="final-slide-divider"></div>
+                
+                <a href="https://www.prepeai.in" class="final-slide-button" target="_blank" rel="noopener noreferrer">
+                    Visit Our Website
+                </a>
+            </div>
+        </section>
+
+    </main>
+</body>
+</html>
